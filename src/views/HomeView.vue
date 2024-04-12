@@ -50,7 +50,6 @@ import CityList from '@/components/CityList.vue';
 
 const router = useRouter();
 const prevCity = (place) => {
-  console.log(place);
   const city = place.name;
   const state = place.country;
 
@@ -78,7 +77,6 @@ const getSearchResults = () => {
       try {
         const result = await axios.get(`http://api.weatherapi.com/v1/search.json?key=7ec67fc57e1d4afb86462144240904&q=${searchQuery.value}`);
         mapboxSearchRes.value = result.data;
-        console.log(mapboxSearchRes.value);
 
       } catch {
         searchError.value = true;

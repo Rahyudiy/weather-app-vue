@@ -22,7 +22,6 @@ const getCities = async () => {
         requests.push(
             axios.get(`http://api.weatherapi.com/v1/current.json?key=7ec67fc57e1d4afb86462144240904&q=${city.name}&aqi=no`)
         );
-        // console.log(city);
     });
 
     const weatherData = await Promise.all(requests);
