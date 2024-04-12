@@ -20,7 +20,7 @@ const getCities = async () => {
     const requests = [];
     savedCities.value.forEach((city) => {
         requests.push(
-            axios.get(`http://api.weatherapi.com/v1/current.json?key=7ec67fc57e1d4afb86462144240904&q=${city.name}&aqi=no`)
+            axios.get(`https://api.weatherapi.com/v1/current.json?key=7ec67fc57e1d4afb86462144240904&q=${city.name}&aqi=no`)
         );
     });
 

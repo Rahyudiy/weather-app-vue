@@ -64,7 +64,7 @@ const showDetail = ref(false);
 
 const getWeather = async () => {
     try {
-        const res = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=7ec67fc57e1d4afb86462144240904&q=${placeData.name}&days=7&aqi=no&alerts=no`);
+        const res = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=7ec67fc57e1d4afb86462144240904&q=${placeData.name}&days=7&aqi=no&alerts=no`);
         const data = await res.json();
         weatherData.value = data;
     } catch (error) {

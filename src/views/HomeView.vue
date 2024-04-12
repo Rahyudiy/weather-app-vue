@@ -75,7 +75,7 @@ const getSearchResults = () => {
   queryTimeOut.value = setTimeout(async () => {
     if (searchQuery.value !== "") {
       try {
-        const result = await axios.get(`http://api.weatherapi.com/v1/search.json?key=7ec67fc57e1d4afb86462144240904&q=${searchQuery.value}`);
+        const result = await axios.get(`https://api.weatherapi.com/v1/search.json?key=7ec67fc57e1d4afb86462144240904&q=${searchQuery.value}`);
         mapboxSearchRes.value = result.data;
 
       } catch {
